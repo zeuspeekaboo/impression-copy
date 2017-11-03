@@ -84,7 +84,7 @@
             loadBuffer(imgs[0]);
 			displayBuffer();
             
-            setInterval(function() { switchPic(imgs) }, 100000);
+            setInterval(function() { switchPic(imgs) }, 120000);
             setInterval(function() { switchEffects() } , 5000);
 			//image(imgDisplay, 0, 0);
 		}
@@ -100,7 +100,7 @@
 		  		//rotate that vector by an arbitrary amount
 		  		newVector.rotate(angle+random(5));
 		  		//set the magnitude of the vector (speed of displacement)
-		  		newVector.setMag(5);
+		  		newVector.setMag(3);
 		  		//set the position to the newly rotated vector
 		  		blocks[i].position.set(p5.Vector.add(blocks[i].origin, newVector));
 		  		displaceBlock(blocks[i]);
@@ -148,7 +148,7 @@
 			}
 			if (key === 'r') {
 				// randomize the matrix
-				makeBlocks(int(random(100))+100, int(random(100))+100);
+				makeBlocks(int(random(200))+30, int(random(200))+30);
 			}
 			return false; // prevent any default behavior
 		}
