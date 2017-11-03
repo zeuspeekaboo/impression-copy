@@ -96,7 +96,7 @@
 
 		  	for(var i = 0 ; i < blocks.length ; i++){
 		  		//create a new vector pointing from the block origin to the current position
-		  		var newVector = new p5.Vector.sub(blocks[i].position, blocks[i].origin);
+		  		var newVector = new p5.Vector.sub(blocks[i].origin, blocks[i].position);
 		  		//rotate that vector by an arbitrary amount
 		  		newVector.rotate(angle+random(.05))*PI;
 		  		//set the magnitude of the vector (speed of displacement)
@@ -148,8 +148,8 @@
 			}
 			if (key === 'r') {
 				// randomize the matrix
-				makeBlocks(int(random(200))+30, int(random(200))+30);
-			}
+				makeBlocks(int(random(100))+20, int(random(100))+20);
+			
 			return false; // prevent any default behavior
 		}
 
