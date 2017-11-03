@@ -98,7 +98,7 @@
 		  		//create a new vector pointing from the block origin to the current position
 		  		var newVector = new p5.Vector.sub(blocks[i].position*Math.Pi, blocks[i].origin);
 		  		//rotate that vector by an arbitrary amount
-		  		newVector.rotate(angle+random(5));
+		  		newVector.rotate(angle+random(5))*Math.Pi;
 		  		//set the magnitude of the vector (speed of displacement)
 		  		newVector.setMag(1);
 		  		//set the position to the newly rotated vector
