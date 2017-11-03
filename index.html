@@ -92,7 +92,7 @@
 		function draw() {
             
 
-		  	var angle = random(5);
+		  	var angle = random(3);
 
 		  	for(var i = 0 ; i < blocks.length ; i++){
 		  		//create a new vector pointing from the block origin to the current position
@@ -127,7 +127,7 @@
 				displayBuffer();
 			}
         function switchEffects(){
-            if(blockWidth<=20) {
+            if(blockWidth<=30) {
                 makeBlocks(int(random(20))+30, int(random(20))+30);
         }
             else{
