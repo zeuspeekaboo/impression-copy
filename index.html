@@ -92,7 +92,7 @@
 		function draw() {
             
 
-		  	var angle = random(3);
+		  	var angle = random(。05);
 
 		  	for(var i = 0 ; i < blocks.length ; i++){
 		  		//create a new vector pointing from the block origin to the current position
@@ -100,7 +100,7 @@
 		  		//rotate that vector by an arbitrary amount
 		  		newVector.rotate(angle+random(.05));
 		  		//set the magnitude of the vector (speed of displacement)
-		  		newVector.setMag(5);
+		  		newVector.setMag(3);
 		  		//set the position to the newly rotated vector
 		  		blocks[i].position.set(p5.Vector.add(blocks[i].origin, newVector));
 		  		displaceBlock(blocks[i]);
@@ -148,7 +148,7 @@
 			}
 			if (key === 'r') {
 				// randomize the matrix
-				makeBlocks(int(random(100))+20, int(random(100))+20);
+				makeBlocks(int(random(80))+20, int(random(80))+20);
 			}
 			return false; // prevent any default behavior
 		}
