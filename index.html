@@ -76,12 +76,12 @@
         
 		function setup() {
 			devicePixelScaling(false);
-			for (var i = 0; i<imgs.length; i++){
-			imgBuffer = createImage(imgs[i].width, imgs[i].height);
-			imgDisplay = createImage(imgs[i].width, imgs[i].height);
+			//for (var i = 0; i<imgs.length; i++){
+			imgBuffer = createImage(imgs[0].width, imgs[0].height);
+			imgDisplay = createImage(imgs[0].width, imgs[0].height);
 			makeBlocks(200, 200);
-			createCanvas(imgs[i].width, imgs[i].height);
-			}
+			createCanvas(imgs[0].width, imgs[0].height);
+			//}
 		
             loadBuffer(imgs[0]);
 			displayBuffer();
@@ -125,6 +125,8 @@
                 else{
                     imageCounter = 0;
                 }
+				imgBuffer = createImage(imgs[imageCounter].width, imgs[imageCounter].height);
+				imgDisplay = createImage(imgs[imageCounter].width, imgs[imageCounter].height);
 				loadBuffer(imgs[imageCounter]);
 				displayBuffer();
 			}
