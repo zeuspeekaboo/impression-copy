@@ -76,10 +76,12 @@
         
 		function setup() {
 			devicePixelScaling(false);
-			imgBuffer = createImage(imageWidth, imageHeight);
-			imgDisplay = createImage(imageWidth, imageHeight);
+			for (var i = 0; i<img.length; i++){
+			imgBuffer = createImage(imgs[i].width, imgs[i].height);
+			imgDisplay = createImage(imgs[i].width, imgs[i].height);
 			makeBlocks(200, 200);
-			createCanvas(imageWidth, imageHeight);
+			createCanvas(imgs[i].width, imgs[i].height);
+			}
 		
             loadBuffer(imgs[0]);
 			displayBuffer();
