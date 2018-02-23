@@ -147,6 +147,8 @@
                 else{
                     imageCounter = 0;
                 }
+				imgBuffer = createImage(imgs[imageCounter].width, imgs[imageCounter].height);
+				imgDisplay = createImage(imgs[imageCounter].width, imgs[imageCounter].height);
 				loadBuffer(imgs[imageCounter]);
 				displayBuffer();
 			}
