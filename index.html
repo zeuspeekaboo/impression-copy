@@ -96,13 +96,13 @@
             
                         background(0);
 			
-		  	var angle = random(.03);
+		  	var angle = random(.05);
 
 		  	for(var i = 0 ; i < blocks.length ; i++){
 		  		//create a new vector pointing from the block origin to the current position
 		  		var newVector = new p5.Vector.sub(blocks[i].position, blocks[i].origin);
 		  		//rotate that vector by an arbitrary amount
-		  		newVector.rotate(angle+random(.03));
+		  		newVector.rotate(angle+random(.05));
 		  		//set the magnitude of the vector (speed of displacement)
 		  		newVector.setMag(2);
 		  		//set the position to the newly rotated vector
@@ -134,7 +134,7 @@
 			}
         function switchEffects(){
             if(blockWidth<=30) {
-                makeBlocks(int(random(20))+30, int(random(20))+30);
+                makeBlocks(int(random(50))+30, int(random(50))+30);
         }
             else{
                 makeBlocks(int(random(100))+80, int(random(100))+80);
