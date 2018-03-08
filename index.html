@@ -96,15 +96,15 @@
             
                         background(0);
 			
-		  	var angle = random(.05);
+		  	var angle = random(.03);
 
 		  	for(var i = 0 ; i < blocks.length ; i++){
 		  		//create a new vector pointing from the block origin to the current position
 		  		var newVector = new p5.Vector.sub(blocks[i].position, blocks[i].origin);
 		  		//rotate that vector by an arbitrary amount
-		  		newVector.rotate(angle+random(.05));
+		  		newVector.rotate(angle+random(.03));
 		  		//set the magnitude of the vector (speed of displacement)
-		  		newVector.setMag(3);
+		  		newVector.setMag(2);
 		  		//set the position to the newly rotated vector
 		  		blocks[i].position.set(p5.Vector.add(blocks[i].origin, newVector));
 		  		displaceBlock(blocks[i]);
