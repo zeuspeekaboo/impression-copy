@@ -136,7 +136,7 @@
                 makeBlocks(int(random(100))+50, int(random(100))+50);
         }
             else{
-                makeBlocks(int(random(100))+80, int(random(100))+80);
+                makeBlocks(int(random(100))+180, int(random(100))+180);
             }
         }
 		function keyTyped() {
@@ -161,6 +161,11 @@
 		}
 
 		function mousePressed() {
+			
+			if (key === 'a') {
+                if (imageCounter < 6) {
+                  imageCounter= imageCounter +1;   
+			
 			makeBlocks(int(random(20))+2, int(random(20))+2);
 		}
 
