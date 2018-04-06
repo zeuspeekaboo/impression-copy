@@ -128,7 +128,7 @@
 				if (alf == 255) {
 					state = fadein;
 				}
-			} else (state==fadein) {
+			} else if(state==fadein) {
 				noStroke();
 			fill(0,alf);
 			rect(-width/2,-height/2,width,height);
