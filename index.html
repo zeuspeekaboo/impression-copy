@@ -165,7 +165,7 @@
 				displayBuffer();
 			}
         function switchEffects(){
-            if(blockWidth<=30 || blockWidth == image.width ) {
+            if(blockWidth<=30 || blockWidth != image.width ) {
                 makeBlocks(int(random(100))+50, int(random(100))+50);
         }
             else{
