@@ -103,7 +103,7 @@
                         background(0);
 			
 		  	var angle = random(.01);
-
+			if (state!=fadein) {
 		  	for(var i = 0 ; i < blocks.length ; i++){
 		  		//create a new vector pointing from the block origin to the current position
 		  		var newVector = new p5.Vector.sub(blocks[i].position, blocks[i].origin);
@@ -115,7 +115,7 @@
 		  		blocks[i].position.set(p5.Vector.add(blocks[i].origin, newVector));
 		  		displaceBlock(blocks[i]);
 		  	}
-
+			}
 			displayBuffer();
 		        translate(windowWidth/2,windowHeight/2);
 			image(imgDisplay,0,0,windowWidth,windowHeight);
@@ -127,7 +127,15 @@
 			alf ++;
 				if (alf == 255) {
 					switchPic(imgs);
-					alf = 0;
+					state = fadein;
+				}
+			} else (state==fadein) {
+				noStroke();
+			fill(0,alf);
+			rect(-width/2,-height/2,width,height);
+			alf --;
+				if (alf == 0) {
+					switchPic(imgs);
 					state = showimage;
 				}
 			}
