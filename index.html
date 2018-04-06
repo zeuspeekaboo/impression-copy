@@ -117,10 +117,11 @@
 			image(imgDisplay,0,0,windowWidth,windowHeight);
 			noStroke();
 			fill(0,alpha);
-			rect(0,0,width,height);
+			rect(-width/2,-height/2,width,height);
 			alpha += dir;
 			if (alpha == 255) dir = -1;
 			if (alpha == 0) dir = 1;
+			print(alpha);
 		}
 
         function timerSwitch(imgs) {
