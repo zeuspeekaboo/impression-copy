@@ -70,7 +70,7 @@
             imgSrc5= loadImage("image5.png");
             imgSrc6= loadImage("image6.png");
             
-            imgs = [imgSrc1, imgSrc2,imgSrc3, imgSrc4,imgSrc5,imgSrc6];
+            imgs = [imgSrc1, imgSrc1];
 		}
         
 		function setup() {
@@ -86,7 +86,7 @@
             loadBuffer(imgs[0]);
 			displayBuffer();
             
-            setInterval(function() { switchPic(imgs) }, 120000);
+            setInterval(function() { switchPic(imgs) }, 12000);
             setInterval(function() { switchEffects() } , 5000);
 			//image(imgDisplay, 0, 0);
 		}
