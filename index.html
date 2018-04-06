@@ -63,6 +63,10 @@
 		var blocks = [];
 		var alf = 0;
 		var dir = 1;
+		var fadein = 0;
+		var fadeout = 1;
+		var showimage = 2;
+		var state = showimage;
 			
 		
 		function preload(){
@@ -89,7 +93,7 @@
             loadBuffer(imgs[0]);
 			displayBuffer();
             
-            setInterval(function() { switchPic(imgs) }, 12000);
+            setInterval(function() { triggerFade() }, 12000);
             setInterval(function() { switchEffects() } , 5000);
 			//image(imgDisplay, 0, 0);
 		}
@@ -115,19 +119,28 @@
 			displayBuffer();
 		        translate(windowWidth/2,windowHeight/2);
 			image(imgDisplay,0,0,windowWidth,windowHeight);
+			
+			if (state==fadeout) {
 			noStroke();
 			fill(0,alf);
 			rect(-width/2,-height/2,width,height);
-			alf += dir;
-			if (alf == 255) dir = -1;
-			if (alf == 0) dir = 1;
-			print(alf);
+			alf ++;
+				if (alf == 255) {
+					switchPic(imgs);
+					alf = 0;
+					state = showimage;
+				}
+			}
 		}
 
         function timerSwitch(imgs) {
         TimerRunning=true;
         setInterval(function() { switchPic(imgs) }, 30000);
       }
+	function triggerFade() {
+		state = fadeout;
+	}
+			
       
         function switchPic(imgs) {
          if (imageCounter < 5) {
