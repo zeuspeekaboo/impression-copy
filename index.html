@@ -162,16 +162,7 @@
 
 		function mousePressed() {
 			
-			    if (imageCounter < 6) {
-                  imageCounter= imageCounter +1;   
-                }
-                else{
-                    imageCounter = 0;
-                }
-			imgBuffer = createImage(imgs[imageCounter].width, imgs[imageCounter].height);
-				imgDisplay = createImage(imgs[imageCounter].width, imgs[imageCounter].height);
-				loadBuffer(imgs[imageCounter]);
-				displayBuffer();
+			  makeBlocks(int(random(20))+2, int(random(20))+2);
 			}
 		
 	
