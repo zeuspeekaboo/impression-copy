@@ -61,6 +61,9 @@
 		var blocksWide;
 
 		var blocks = [];
+		var alpha = 0;
+		var dir = 1;
+			
 		
 		function preload(){
 			imgSrc1 = loadImage("image1.png");
@@ -111,7 +114,13 @@
 
 			displayBuffer();
 		        translate(windowWidth/2,windowHeight/2);
-			image(imgDisplay,0,0,windowWidth,windowHeight); 
+			image(imgDisplay,0,0,windowWidth,windowHeight);
+			noStroke();
+			fill(0,alpha);
+			rect(0,0,width,height);
+			alpha += dir;
+			if (alpha == 255) dir = -1;
+			if (alpha == 0) dir = 1;
 		}
 
         function timerSwitch(imgs) {
