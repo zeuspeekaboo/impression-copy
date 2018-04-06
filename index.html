@@ -61,7 +61,7 @@
 		var blocksWide;
 
 		var blocks = [];
-		var alpha = 0;
+		var alf = 0;
 		var dir = 1;
 			
 		
@@ -116,12 +116,12 @@
 		        translate(windowWidth/2,windowHeight/2);
 			image(imgDisplay,0,0,windowWidth,windowHeight);
 			noStroke();
-			fill(0,alpha);
+			fill(0,alf);
 			rect(-width/2,-height/2,width,height);
-			alpha += dir;
-			if (alpha == 255) dir = -1;
-			if (alpha == 0) dir = 1;
-			print(alpha);
+			alf += dir;
+			if (alf == 255) dir = -1;
+			if (alf == 0) dir = 1;
+			print(alf);
 		}
 
         function timerSwitch(imgs) {
