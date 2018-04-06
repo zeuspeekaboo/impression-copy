@@ -144,8 +144,10 @@
         TimerRunning=true;
         setInterval(function() { switchPic(imgs) }, 30000);
       }
-	function triggerFade(state == showimage) {
+	function triggerFade() {
+		if (state == showimage){
 		state = fadeout;
+	}
 	}
 			
       
