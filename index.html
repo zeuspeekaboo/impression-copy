@@ -127,6 +127,7 @@
 			alf += 5;
 				if (alf == 255) {
 					state = fadein;
+					switchPic(imgs);
 				}
 			} else if(state==fadein) {
 				noStroke();
@@ -134,7 +135,7 @@
 			rect(-width/2,-height/2,width,height);
 			alf -=5;
 				if (alf == 0) {
-					switchPic(imgs);
+					
 					state = showimage;
 				}
 			}
