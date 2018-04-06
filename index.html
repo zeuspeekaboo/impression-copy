@@ -93,7 +93,7 @@
             loadBuffer(imgs[0]);
 			displayBuffer();
             
-            setInterval(function() { triggerFade() }, 12000);
+            setInterval(function() { triggerFade() }, 120000);
             setInterval(function() { switchEffects() } , 5000);
 			//image(imgDisplay, 0, 0);
 		}
@@ -124,7 +124,7 @@
 			noStroke();
 			fill(0,alf);
 			rect(-width/2,-height/2,width,height);
-			alf ++;
+			alf += 5;
 				if (alf == 255) {
 					state = fadein;
 				}
@@ -132,7 +132,7 @@
 				noStroke();
 			fill(0,alf);
 			rect(-width/2,-height/2,width,height);
-			alf --;
+			alf -=5;
 				if (alf == 0) {
 					switchPic(imgs);
 					state = showimage;
