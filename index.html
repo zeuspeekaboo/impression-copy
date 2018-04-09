@@ -93,7 +93,7 @@
             loadBuffer(imgs[0]);
 			displayBuffer();
             
-            setInterval(function() { triggerFade() }, 20000);
+            setInterval(function() { triggerFade() }, 120000);
             setInterval(function() { switchEffects() } , 5000);
 			//image(imgDisplay, 0, 0);
 		}
@@ -134,7 +134,7 @@
 			fill(0,alf);
 			rect(-width/2,-height/2,width,height);
 			alf -=5;
-				if (alf == 30) {
+				if (alf == 50) {
 					
 					state = showimage;
 				}
@@ -166,10 +166,10 @@
 			}
         function switchEffects(){
             if(blockWidth<=30 || blockWidth != image.width ) {
-                makeBlocks(int(random(100))+50, int(random(100))+50);
+                makeBlocks(int(random(100))+100, int(random(100))+100);
         }
             else{
-                makeBlocks(int(random(100))+180, int(random(100))+180);
+                makeBlocks(int(random(200))+280, int(random(200))+280);
             }
         }
 		function keyTyped() {
